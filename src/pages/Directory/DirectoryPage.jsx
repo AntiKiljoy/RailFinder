@@ -6,7 +6,7 @@ import "./DirectoryPage.css";
 const DirectoryPage = () => {
   return (
     <section className="page" id="info-page">
-      <h1>Useful Information</h1>
+      <h1>Explore European Railways!</h1>
       <DenmarkDirectory />
       <EnglandDirectory />
     </section>

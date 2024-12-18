@@ -1,4 +1,4 @@
-//Connor
+// Bad Naming, this is the England Card Component on the Directory Page
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -6,7 +6,7 @@ export default function EnglandDirectory() {
   const navigate = useNavigate();
 
   function handleClick() {
-    navigate("/vets");
+    navigate("/EnglandOverview");
   }
 
   return (

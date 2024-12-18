@@ -10,6 +10,7 @@ import CreatePage from "./pages/CreatePage";
 import HomePage from "./pages/HomePage/HomePage";
 import DirectoryPage from "./pages/Directory/DirectoryPage";
 import DenmarkOverview from "./pages/Directory/Denmark/DenmarkOverview";  
+import EnglandOverview from "./pages/Directory/England/EnglandOverview";
 //My new
 import ProfilePage from "./pages/ProfilePage";
 import SignInPage from "./pages/SignInPage";
@@ -50,6 +51,7 @@ export default function App() {
         <Route path="/posts/:postId" element={<PostDetailPage />} />
         <Route path="/posts/:postId/edit" element={<UpdatePage />} />
         <Route path="/DenmarkOverview" element={<DenmarkOverview />} />
+        <Route path="/EnglandOverview" element={<EnglandOverview />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/info" element={<InfoPage />} />
         <Route path="/directory" element={<DirectoryPage />} />

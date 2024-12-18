@@ -1,0 +1,145 @@
+/* EnglandOverview.css */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px; /* Base font size */
+  box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+}
+
+/* Apply box-sizing to all elements */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* England Overview Page Styles */
+.England-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem;
+  background-color: #ffffff;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.England-page h1 {
+  font-size: 2.5rem;
+  color: #003366; /* British Rail Dark Blue */
+  margin-bottom: 2rem;
+}
+
+/* Container for England list */
+.England-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+
+/* England Card */
+.England-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: calc(33.333% - 2rem);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto; /* Allow height to adjust based on content */
+  text-align: center; /* Ensure text alignment is consistent */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.England-card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.England-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Card Content */
+.England-card h2 {
+  font-size: 1.25rem;
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+
+.England-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+/* New Section for Location, Status, and Traction Type */
+.England-details {
+  border-top: 1px solid #ddd;
+  padding-top: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.England-location,
+.England-status,
+.England-tractionType {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.2rem;
+}
+
+/* England Location Link */
+.England-location a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.England-location a:hover {
+  text-decoration: underline;
+}
+
+/* Details Link */
+.England-details-link {
+  font-size: 1rem;
+  color: #ffcc00;
+  text-decoration: none;
+  margin-top: auto; /* Push link to the bottom */
+}
+
+.England-details-link:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .England-card {
+    width: calc(50% - 2rem);
+  }
+}
+
+@media (max-width: 768px) {
+  .England-card {
+    width: calc(100% - 2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .England-card {
+    width: calc(100% - 2rem);
+  }
+}
