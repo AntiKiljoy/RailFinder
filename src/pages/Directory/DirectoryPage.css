@@ -60,3 +60,19 @@ body {
   color: #555;
   text-align: justify;
 }
+
+.post-card{
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: calc(33.333% - 2rem);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto; /* Allow height to adjust based on content */
+  text-align: center; /* Ensure text alignment is consistent */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
