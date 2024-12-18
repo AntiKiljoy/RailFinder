@@ -1,5 +1,3 @@
-//Consuelo, Connor and Kosei
-
 import { NavLink } from "react-router-dom";
 import home from "../../images/home.svg";
 import discover from "../../images/discover.svg";
