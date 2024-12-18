@@ -9,7 +9,7 @@ export default function VetDetailsPage() {
 
   useEffect(() => {
     async function getVet() {
-      const url = `https://reptile-app-ebad6-default-rtdb.firebaseio.com/vets/${vetId}.json`;
+      const url = `https://railfinder-app-default-rtdb.europe-west1.firebasedatabase.app/vets/${vetId}.json`;
       const response = await fetch(url);
       const data = await response.json();
       setVet(data);

@@ -9,8 +9,8 @@ export default function PostDetailPage() {
   const [post, setPost] = useState();
   const [comments, setComments] = useState([]);
   const params = useParams();
-  const postUrl = `https://reptile-app-ebad6-default-rtdb.firebaseio.com/posts/${params.postId}.json`;
-  const commentsBaseUrl = `https://reptile-app-ebad6-default-rtdb.firebaseio.com/comments/`;
+  const postUrl = `https://railfinder-app-default-rtdb.europe-west1.firebasedatabase.app/posts/${params.postId}.json`;
+  const commentsBaseUrl = `https://railfinder-app-default-rtdb.europe-west1.firebasedatabase.app/comments/`;
 
   useEffect(() => {
     async function getPost() {

@@ -22,7 +22,7 @@ const FeedbackForm = () => {
 
         // Send the feedback to Firebase
         const response = await fetch(
-          "https://reptile-app-ebad6-default-rtdb.firebaseio.com/feedbacks.json",
+          "https://railfinder-app-default-rtdb.europe-west1.firebasedatabase.app/feedbacks.json",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },

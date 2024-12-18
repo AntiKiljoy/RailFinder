@@ -14,14 +14,14 @@ import { getAuth } from "firebase/auth";
 //     appId: "1:950177214357:web:3612a14fba6a7f368f109c"
 // };
 const firebaseConfig = {
-    apiKey: "AIzaSyCWUZxRn1kt_1o6uZXzHglCHDNW8lb0Pf8",
-    authDomain: "reptile-app-ebad6.firebaseapp.com",
-    databaseURL: "https://reptile-app-ebad6-default-rtdb.firebaseio.com",
-    projectId: "reptile-app-ebad6",
-    storageBucket: "reptile-app-ebad6.appspot.com",
-    messagingSenderId: "917415601020",
-    appId: "1:917415601020:web:3723ecbf8d7c9d3f95faf9"
-  };
+  apiKey: "AIzaSyD_ZU43si1-dSoKM_g3INZuQ3Q5s5OPPI8",
+  authDomain: "railfinder-app.firebaseapp.com",
+  databaseURL: "https://railfinder-app-default-rtdb.europe-west1.firebasedatabase.app",
+  projectId: "railfinder-app",
+  storageBucket: "railfinder-app.firebasestorage.app",
+  messagingSenderId: "1029492883312",
+  appId: "1:1029492883312:web:07f01d448ee7b1485399b5"
+};
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

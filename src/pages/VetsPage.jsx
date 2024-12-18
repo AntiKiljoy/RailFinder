@@ -8,7 +8,7 @@ export default function VetsPage() {
 
   useEffect(() => {
     async function getVets() {
-      const url = "https://reptile-app-ebad6-default-rtdb.firebaseio.com/vets.json";
+      const url = "https://railfinder-app-default-rtdb.europe-west1.firebasedatabase.app/vets.json";
       const response = await fetch(url);
       const data = await response.json();
       const vetsArray = data ? Object.keys(data).map((key) => ({ id: key, ...data[key] })) : [];

@@ -1,0 +1,159 @@
+/* HomePage.css */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* General Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px; /* Base font size */
+  box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+}
+
+/* Wrapper for overall alignment */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #003366; /* British Rail Dark Blue */
+  color: #ffcc00; /* Yellow for high contrast */
+  margin: 0; /* Ensure no bottom margin */
+  width: 100%;
+}
+
+.header h1,
+.header p {
+  background-color: transparent; /* Ensure no background color */
+  margin: 0; /* Ensure no margins */
+  color: #ffcc00; /* Yellow for high contrast */
+}
+
+.header h1 {
+  font-size: 2.5rem;
+}
+
+.header p {
+  font-size: 1.2rem;
+  margin-top: 1.25rem; /* Margin to separate paragraph text */
+}
+
+.header-image {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  margin-top: 1.25rem;
+}
+
+/* Intro Section */
+.intro-section {
+  padding: 3rem 1rem;
+  background-color: #ffffff;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.intro-section p {
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+  text-align: justify;
+  color: #555; /* Slightly darker for readability */
+}
+
+/* Highlights Section */
+.highlights-section {
+  padding: 4rem 1rem;
+  background-color: #d3d3d3; /* Light Grey for contrast */
+  text-align: center;
+  width: 100%;
+  margin: 0; /* Ensure no margin to prevent white lines */
+}
+
+.highlights-section h2 {
+  font-size: 2rem;
+  color: #003366; /* British Rail Dark Blue */
+  margin-bottom: 2.5rem;
+}
+
+.highlight {
+  display: inline-block;
+  width: calc(50% - 2rem);
+  margin: 1rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+  .highlight {
+    width: calc(100% - 2rem);
+  }
+}
+
+.highlight h3 {
+  font-size: 1.5rem;
+  color: #003366; /* British Rail Dark Blue */
+}
+
+.highlight p {
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.highlight img {
+  width: 100%;
+  max-height: 25vh;
+  object-fit: cover;
+  border-radius: 0.625rem;
+  margin-top: 0.625rem;
+}
+
+/* CTA Section */
+.cta-section {
+  padding: 4rem 1rem;
+  background-color: #003366; /* British Rail Dark Blue */
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 2rem;;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  background-color: #ffcc00; /* Yellow for high contrast */
+  color: #003366; /* British Rail Dark Blue */
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 0.3125rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #e6b800;
+}

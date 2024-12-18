@@ -30,7 +30,7 @@ export default function SignUpPage() {
   }
 
   async function createUser(uid, mail) {
-    const url = `https://reptile-app-ebad6-default-rtdb.firebaseio.com/users/${uid}.json`;
+    const url = `https://railfinder-app-default-rtdb.europe-west1.firebasedatabase.app/users/${uid}.json`;
     const response = await fetch(url, {
       method: "PUT",
       body: JSON.stringify({ name, mail })

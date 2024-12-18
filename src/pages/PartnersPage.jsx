@@ -9,7 +9,7 @@ export default function PartnersPage() {
     async function getPartners() {
       // Asynchronous function to fetch partner data from the Firebase database
       const url =
-        "https://reptile-app-ebad6-default-rtdb.firebaseio.com/partners.json";
+        "https://railfinder-app-default-rtdb.europe-west1.firebasedatabase.app/partners.json";
       const response = await fetch(url);
       const data = await response.json();
       const partnersArray = data // Transform the data object into an array of partners

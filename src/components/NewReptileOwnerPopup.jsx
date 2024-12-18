@@ -8,7 +8,7 @@ import { auth } from "../firebase-config";
 import { useEffect } from 'react';
 
 export default function NewReptileOwnerPopup() {
-    const url = `https://reptile-app-ebad6-default-rtdb.firebaseio.com/users/${auth.currentUser?.uid}.json`;
+    const url = `https://railfinder-app-default-rtdb.europe-west1.firebasedatabase.app/users/${auth.currentUser?.uid}.json`;
     const navigate = useNavigate();
 
     useEffect(() => {

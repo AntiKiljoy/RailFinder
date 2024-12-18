@@ -5,7 +5,7 @@ import UserPosts from '../components/UserPosts';
 
 export default function UserProfilePage() {
     const { userId } = useParams();
-    const userUrl = `https://reptile-app-ebad6-default-rtdb.firebaseio.com/users/${userId}.json`;
+    const userUrl = `https://railfinder-app-default-rtdb.europe-west1.firebasedatabase.app/users/${userId}.json`;
 
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);

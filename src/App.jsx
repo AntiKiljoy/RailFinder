@@ -2,11 +2,15 @@
 import { onAuthStateChanged } from "@firebase/auth";
 import { useEffect, useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import Nav from "./components/Nav";
+import Nav from "./components/NavBar/Nav";
 import "./firebase-config";
 import { auth } from "./firebase-config";
 import CreatePage from "./pages/CreatePage";
-import HomePage from "./pages/HomePage";
+//My new
+import HomePage from "./pages/HomePage/HomePage";
+import DirectoryPage from "./pages/Directory/DirectoryPage";
+import DenmarkOverview from "./pages/Directory/Denmark/DenmarkOverview";  
+//My new
 import ProfilePage from "./pages/ProfilePage";
 import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
@@ -45,9 +49,10 @@ export default function App() {
         <Route path="/create" element={<CreatePage />} />
         <Route path="/posts/:postId" element={<PostDetailPage />} />
         <Route path="/posts/:postId/edit" element={<UpdatePage />} />
+        <Route path="/DenmarkOverview" element={<DenmarkOverview />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/info" element={<InfoPage />} />
-        <Route path="/discover" element={<DiscoverPage />} />
+        <Route path="/directory" element={<DirectoryPage />} />
         <Route path="/vets" element={<VetsPage />} />
         <Route path="/vets/:vetId" element={<VetDetailsPage />} />
         <Route path="/partners" element={<PartnersPage />} />
@@ -57,15 +62,18 @@ export default function App() {
     </>
   );
 
-  // variable holding all public routes without nav bar
+  // variable holding all public routes
   const publicRoutes = (
     <Routes>
-      <Route path="/sign-in" element={<SignInPage />} />
-      <Route path="/sign-up" element={<SignUpPage />} />
-      <Route path="*" element={<Navigate to="/sign-in" />} />
+      <Route path="/signin" element={<SignInPage />} />
+      <Route path="/signup" element={<SignUpPage />} />
+      <Route path="*" element={<Navigate to="/signin" />} />
     </Routes>
   );
 
-  // if user is authenticated, show privateRoutes, else show publicRoutes
-  return <main>{isAuth ? privateRoutes : publicRoutes}</main>;
+  return (
+    <div className="App">
+      {isAuth ? privateRoutes : publicRoutes}
+    </div>
+  );
 }

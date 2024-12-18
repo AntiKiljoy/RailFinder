@@ -19,6 +19,7 @@ export default function SignInPage() {
         console.log(user); // for test purposes: logging the authenticated user
       })
       .catch(error => {
+        console.error("Error signing in:", error);
         let code = error.code; // saving error code in variable
         console.log(code);
         code = code.replaceAll("-", " "); // some JS string magic to display error message. See the log above in the console

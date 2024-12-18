@@ -11,7 +11,7 @@ export default function CommentForm({postId}) {
         newComment.postId = postId;
         newComment.createdAt = Date.now();
         // add comment to the comment tree
-        const commentUrl="https://reptile-app-ebad6-default-rtdb.firebaseio.com/comments.json";
+        const commentUrl="https://railfinder-app-default-rtdb.europe-west1.firebasedatabase.app/comments.json";
 
         const response = await fetch(commentUrl, {
             method: "POST",
@@ -27,7 +27,7 @@ export default function CommentForm({postId}) {
 
             console.log("thisis the data.naeme" + data.name);
             // URL to add the comment reference to the specific post in the post tree
-            const postUrl = `https://reptile-app-ebad6-default-rtdb.firebaseio.com/posts/${postId}/comments.json`;
+            const postUrl = `https://railfinder-app-default-rtdb.europe-west1.firebasedatabase.app/posts/${postId}/comments.json`;
 
             // Add the reference of the comment to the post's comments list
             await fetch(postUrl, {

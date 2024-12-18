@@ -26,7 +26,7 @@ export default function LikeButton({ post, yourUserId }) {
     const heart = isLiked ? favouriteIconFilled : favouriteIcon;
 
     async function handleLike() {
-        const url = `https://reptile-app-ebad6-default-rtdb.firebaseio.com/posts/${post.id}.json`;
+        const url = `https://railfinder-app-default-rtdb.europe-west1.firebasedatabase.app/posts/${post.id}.json`;
         
         // Create a clone of the existing likes object to avoid overwriting others' likes
         const updatedLikes = { ...post.likes };
