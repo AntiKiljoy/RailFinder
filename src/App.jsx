@@ -1,4 +1,3 @@
-//Consuelo, Connor and Kosei
 import { onAuthStateChanged } from "@firebase/auth";
 import { useEffect, useState } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
