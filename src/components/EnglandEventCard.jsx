@@ -2,7 +2,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function VetLinkCard() {
+export default function EnglandEventCard() {
   const navigate = useNavigate();
 
   function handleClick() {
@@ -11,8 +11,8 @@ export default function VetLinkCard() {
 
   return (
     <div className="post-card" onClick={handleClick}>
-      <h2>Verified Vets</h2>
-      <p>Find reliable nearby vets for your reptile friends.</p>
+      <h2>England</h2>
+      <p>Explore upcoming events in England</p>
     </div>
   );
 }

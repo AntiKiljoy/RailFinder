@@ -2,16 +2,18 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-
 export default function VetsPage() {
   const [vets, setVets] = useState([]);
 
   useEffect(() => {
     async function getVets() {
-      const url = "https://railfinder-app-default-rtdb.europe-west1.firebasedatabase.app/vets.json";
+      const url =
+        "https://railfinder-app-default-rtdb.europe-west1.firebasedatabase.app/vets.json";
       const response = await fetch(url);
       const data = await response.json();
-      const vetsArray = data ? Object.keys(data).map((key) => ({ id: key, ...data[key] })) : [];
+      const vetsArray = data
+        ? Object.keys(data).map((key) => ({ id: key, ...data[key] }))
+        : [];
       setVets(vetsArray);
     }
     getVets();
@@ -19,14 +21,16 @@ export default function VetsPage() {
 
   return (
     <div className="vets-page">
-      <h1>Reliable Nearby Vets</h1>
+      <h1>England</h1>
       <div className="vets-list">
         {vets.map((vet) => (
           <div key={vet.id} className="vet-card">
             <img src={vet.image} alt={vet.name} className="vet-image" />
             <h2>{vet.name}</h2>
             <a
-              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(vet.location)}`}
+              href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                vet.location
+              )}`}
               target="_blank"
               rel="noopener noreferrer"
               className="vet-location"

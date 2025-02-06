@@ -2,8 +2,8 @@
 import React from "react";
 import FeedbackForm from "../components/FeedbackForm";
 import StepByStepGuideCard from "../components/StepByStepGuideCard";
-import PartnersCard from "../components/PartnersCard";
-import VetLinkCard from "../components/VetLinkCard";
+import DenmarkEventCard from "../components/DenmarkEventCard";
+import EnglandEventCard from "../components/EnglandEventCard";
 import { auth } from "../firebase-config";
 
 const InfoPage = () => {
@@ -11,8 +11,8 @@ const InfoPage = () => {
     <section className="page" id="info-page">
       <h1>Useful Information</h1>
       <StepByStepGuideCard />
-      <VetLinkCard />
-      <PartnersCard />
+      <EnglandEventCard />
+      <DenmarkEventCard />
       {/* Include the FeedbackForm component */}
       <FeedbackForm />
     </section>

@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 
 //Consuelo
-export default function PartnersCard() {
+export default function DenmarkEventCard() {
   const navigate = useNavigate();
 
   function handleClick() {
@@ -10,11 +10,8 @@ export default function PartnersCard() {
 
   return (
     <div className="post-card" onClick={handleClick}>
-      <h2>Partners</h2>
-      <p>
-        We collaborate with partners that we trust and are verified to guarantee
-        you the best experience.
-      </p>
+      <h2>Denmark</h2>
+      <p>Explore all Danish hertiage options</p>
     </div>
   );
 }
