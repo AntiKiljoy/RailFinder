@@ -8,7 +8,7 @@ import CreatePage from "./pages/CreatePage";
 //My new
 import HomePage from "./pages/HomePage/HomePage";
 import DirectoryPage from "./pages/Directory/DirectoryPage";
-import DenmarkOverview from "./pages/Directory/Denmark/DenmarkOverview";  
+import DenmarkOverview from "./pages/Directory/Denmark/DenmarkOverview";
 import EnglandOverview from "./pages/Directory/England/EnglandOverview";
 //My new
 import ProfilePage from "./pages/ProfilePage";
@@ -18,7 +18,7 @@ import UpdatePage from "./pages/UpdatePage";
 import PostDetailPage from "./pages/PostDetailPage";
 import InfoPage from "./pages/InfoPage";
 import DiscoverPage from "./pages/DiscoverPage";
-import VetsPage from "./pages/VetsPage";
+import EnglandEventsPage from "./pages/EnglandEvents/EnglandEventsPage";
 import PartnersPage from "./pages/PartnersPage";
 import UserProfilePage from "./pages/UserProfilePage";
 import VetDetailsPage from "./pages/VetDetailsPage";
@@ -54,7 +54,7 @@ export default function App() {
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/info" element={<InfoPage />} />
         <Route path="/directory" element={<DirectoryPage />} />
-        <Route path="/vets" element={<VetsPage />} />
+        <Route path="/EnglandEventsPage" element={<EnglandEventsPage />} />
         <Route path="/vets/:vetId" element={<VetDetailsPage />} />
         <Route path="/partners" element={<PartnersPage />} />
         <Route path="*" element={<Navigate to="/" />} />
@@ -72,9 +72,5 @@ export default function App() {
     </Routes>
   );
 
-  return (
-    <div className="App">
-      {isAuth ? privateRoutes : publicRoutes}
-    </div>
-  );
+  return <div className="App">{isAuth ? privateRoutes : publicRoutes}</div>;
 }

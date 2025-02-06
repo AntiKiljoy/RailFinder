@@ -1,0 +1,157 @@
+/* Import Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* General Styles */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Main Container */
+.england-events-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  padding: 4rem 1rem;
+  background-color: #003366; /* British Rail Dark Blue */
+  color: #ffcc00; /* Yellow for contrast */
+  width: 100%;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.header p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+/* Event List Container */
+.england-events-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 700px;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 0.625rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* Event Card */
+.event-card {
+  width: 100%;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Event Title */
+.event-card h2 {
+  font-size: 1.5rem;
+  color: #003366; /* British Rail Dark Blue */
+  margin-bottom: 0.5rem;
+}
+
+/* Event Date */
+.event-card p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0.3rem 0;
+}
+
+.event-card strong {
+  color: #222;
+}
+
+/* More Details Button */
+.event-details-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.625rem 1.25rem;
+  background-color: #ffcc00; /* Yellow for contrast */
+  color: #003366; /* British Rail Dark Blue */
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 0.3125rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.event-details-link:hover {
+  background-color: #e6b800;
+}
+
+/* Call to Action (CTA) Section */
+.cta-section {
+  padding: 4rem 1rem;
+  background-color: #003366; /* British Rail Dark Blue */
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* CTA Button */
+.cta-button {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  background-color: #ffcc00; /* Yellow for contrast */
+  color: #003366; /* British Rail Dark Blue */
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 0.3125rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e6b800;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .england-events-list {
+    max-width: 90%;
+  }
+}

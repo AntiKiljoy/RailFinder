@@ -6,7 +6,7 @@ export default function EnglandEventCard() {
   const navigate = useNavigate();
 
   function handleClick() {
-    navigate("/vets");
+    navigate("/EnglandEventsPage");
   }
 
   return (
