@@ -101,11 +101,11 @@ export default function HomePage() {
             <PostCard post={post} key={post.id} />
           ))} */}
           {filteredPosts
-  .slice()
-  .sort((a, b) => b.createdAt - a.createdAt)
-  .map((post) => (
-    <PostCard post={post} key={post.id} />
-  ))}
+            .slice()
+            .sort((a, b) => b.createdAt - a.createdAt)
+            .map((post) => (
+              <PostCard post={post} key={post.id} />
+            ))}
         </section>
       </section>
       {/* FeedbackForm has been moved to InfoPage */}

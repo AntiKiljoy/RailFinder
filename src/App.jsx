@@ -5,23 +5,19 @@ import Nav from "./components/NavBar/Nav";
 import "./firebase-config";
 import { auth } from "./firebase-config";
 import CreatePage from "./pages/CreatePage";
-//My new
 import HomePage from "./pages/HomePage/HomePage";
 import DirectoryPage from "./pages/Directory/DirectoryPage";
 import DenmarkOverview from "./pages/Directory/Denmark/DenmarkOverview";
 import EnglandOverview from "./pages/Directory/England/EnglandOverview";
-//My new
 import ProfilePage from "./pages/ProfilePage";
 import SignInPage from "./pages/SignInPage";
 import SignUpPage from "./pages/SignUpPage";
 import UpdatePage from "./pages/UpdatePage";
 import PostDetailPage from "./pages/PostDetailPage";
 import InfoPage from "./pages/InfoPage";
-import DiscoverPage from "./pages/DiscoverPage";
 import EnglandEventsPage from "./pages/EnglandEvents/EnglandEventsPage";
 import DenmarkEventsPage from "./pages/DenmarkEvents/DenmarkEventsPage";
 import UserProfilePage from "./pages/UserProfilePage";
-import VetDetailsPage from "./pages/VetDetailsPage";
 
 export default function App() {
   const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth")); // start default value comes from localStorage
@@ -56,7 +52,6 @@ export default function App() {
         <Route path="/directory" element={<DirectoryPage />} />
         <Route path="/EnglandEventsPage" element={<EnglandEventsPage />} />
         <Route path="/DenmarkEventsPage" element={<DenmarkEventsPage />} />
-        <Route path="/vets/:vetId" element={<VetDetailsPage />} />
         <Route path="*" element={<Navigate to="/" />} />
         <Route path="/:userId" element={<UserProfilePage />} />
       </Routes>

@@ -14,7 +14,8 @@ const FeedbackForm = () => {
     e.preventDefault();
     if (feedback.trim() !== "") {
       try {
-        const feedbackData = { //content for data
+        const feedbackData = {
+          //content for data
           feedback: feedback.trim(),
           userId: user ? user.uid : "Anonymous", //anonymous if user is not logged in
           createdAt: new Date().toISOString(),
@@ -49,7 +50,7 @@ const FeedbackForm = () => {
       <textarea
         value={feedback}
         onChange={(e) => setFeedback(e.target.value)}
-        placeholder="Write your feedback here..."
+        placeholder="Write your feedback here... Tell us if what countries/events you'd like to see"
         rows="5"
         cols="40"
       />

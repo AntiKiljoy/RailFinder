@@ -8,7 +8,7 @@ import { auth } from "../firebase-config";
 const InfoPage = () => {
   return (
     <section className="page" id="info-page">
-      <h1>Useful Information</h1>
+      <h1>Find Events by Country</h1>
       <EnglandEventCard />
       <DenmarkEventCard />
       {/* Include the FeedbackForm component */}
