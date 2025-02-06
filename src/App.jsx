@@ -19,7 +19,7 @@ import PostDetailPage from "./pages/PostDetailPage";
 import InfoPage from "./pages/InfoPage";
 import DiscoverPage from "./pages/DiscoverPage";
 import EnglandEventsPage from "./pages/EnglandEvents/EnglandEventsPage";
-import PartnersPage from "./pages/PartnersPage";
+import DenmarkEventsPage from "./pages/DenmarkEvents/DenmarkEventsPage";
 import UserProfilePage from "./pages/UserProfilePage";
 import VetDetailsPage from "./pages/VetDetailsPage";
 
@@ -55,8 +55,8 @@ export default function App() {
         <Route path="/info" element={<InfoPage />} />
         <Route path="/directory" element={<DirectoryPage />} />
         <Route path="/EnglandEventsPage" element={<EnglandEventsPage />} />
+        <Route path="/DenmarkEventsPage" element={<DenmarkEventsPage />} />
         <Route path="/vets/:vetId" element={<VetDetailsPage />} />
-        <Route path="/partners" element={<PartnersPage />} />
         <Route path="*" element={<Navigate to="/" />} />
         <Route path="/:userId" element={<UserProfilePage />} />
       </Routes>

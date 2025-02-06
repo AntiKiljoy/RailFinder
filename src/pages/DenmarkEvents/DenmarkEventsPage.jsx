@@ -1,27 +1,26 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import "./EnglandEventsPage.css";
+import "./DenmarkEventsPage.css";
 
-export default function EnglandEventsPage() {
+export default function DenmarkEventsPage() {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    async function fetchEnglandEvents() {
+    async function fetchDenmarkEvents() {
       const eventsUrl =
         "https://railfinder-app-default-rtdb.europe-west1.firebasedatabase.app/events.json";
       const railwayUrl =
         "https://railfinder-app-default-rtdb.europe-west1.firebasedatabase.app/railways.json";
 
       try {
-        // Fetch events & railways in parallel
         const [eventsResponse, railwayResponse] = await Promise.all([
           fetch(eventsUrl),
           fetch(railwayUrl),
         ]);
 
         if (!eventsResponse.ok || !railwayResponse.ok) {
-          throw new Error(`HTTP error!`);
+          throw new Error("Failed to fetch data.");
         }
 
         const eventsData = await eventsResponse.json();
@@ -30,24 +29,21 @@ export default function EnglandEventsPage() {
         console.log("Fetched Events:", eventsData);
         console.log("Fetched Railways:", railwayData);
 
-        if (eventsData && railwayData && railwayData.England) {
-          // Create a lookup object for railway names by ID
-          const railwayMap = {};
-          railwayData.England.forEach((railway) => {
-            railway.events.forEach((eventId) => {
-              railwayMap[eventId] = railway.name;
-            });
-          });
+        if (eventsData && railwayData && railwayData.Denmark) {
+          // Get all event IDs related to Denmark railways
+          const denmarkEventIds = Object.values(railwayData.Denmark).flatMap(
+            (railway) => railway.events
+          );
 
-          // Filter and map England events with correct railway names
+          // Filter events to only include Denmark events
           const filteredEvents = Object.keys(eventsData)
-            .filter((eventId) => railwayMap[eventId]) // Only include England events
+            .filter((eventId) => denmarkEventIds.includes(eventId))
             .map((eventId) => ({
               id: eventId,
               title: eventsData[eventId].title || "No title",
               date: eventsData[eventId].date || "No date",
               description: eventsData[eventId].description || "No description",
-              railwayName: railwayMap[eventId] || "Unknown Railway",
+              railwayId: eventsData[eventId].railwayId || "N/A",
             }));
 
           setEvents(filteredEvents);
@@ -55,28 +51,27 @@ export default function EnglandEventsPage() {
           setEvents([]);
         }
       } catch (error) {
-        console.error("Error fetching England events:", error);
+        console.error("Error fetching Denmark events:", error);
       }
     }
 
-    fetchEnglandEvents();
+    fetchDenmarkEvents();
   }, []);
 
   return (
-    <div className="england-events-page">
-      <h1>England Heritage Runnings</h1>
+    <div className="denmark-events-page">
+      <div className="header">
+        <h1>Denmark Heritage Runnings</h1>
+      </div>
       {events.length === 0 ? (
         <p>Loading events or no events available.</p>
       ) : (
-        <div className="england-events-list">
+        <div className="denmark-events-list">
           {events.map((event) => (
             <div key={event.id} className="event-card">
               <h2>{event.title}</h2>
               <p>
                 <strong>Date:</strong> {event.date}
-              </p>
-              <p>
-                <strong>Railway:</strong> {event.railwayName}
               </p>
               <p>{event.description}</p>
               <Link to={`/events/${event.id}`} className="event-details-link">
@@ -87,12 +82,10 @@ export default function EnglandEventsPage() {
         </div>
       )}
 
-      {/* Call to Action (CTA) Section */}
+      {/* CTA Section */}
       <div className="cta-section">
-        <h2>Want to Discover More?</h2>
-        <p>
-          Explore the rich heritage of England's railways and upcoming events.
-        </p>
+        <h2>Want to Learn More?</h2>
+        <p>Discover more about Denmark's rich railway history and events.</p>
         <Link to="/about" className="cta-button">
           Learn More
         </Link>

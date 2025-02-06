@@ -14,7 +14,7 @@ body {
 }
 
 /* Main Container */
-.england-events-page {
+.denmark-events-page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -43,7 +43,7 @@ body {
 }
 
 /* Event List Container */
-.england-events-list {
+.denmark-events-list {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,7 +80,7 @@ body {
 /* Event Title */
 .event-card h2 {
   font-size: 1.75rem;
-  color: #0056b3;
+  color: #0056b3; /* Blue */
   margin-bottom: 0.75rem;
 }
 
@@ -100,7 +100,7 @@ body {
   display: inline-block;
   margin-top: 1.5rem;
   padding: 0.75rem 1.5rem;
-  background-color: #0056b3;
+  background-color: #0056b3; /* Blue */
   color: #fff;
   text-decoration: none;
   border-radius: 0.5rem;
@@ -115,7 +115,7 @@ body {
 /* Call to Action (CTA) Section */
 .cta-section {
   padding: 4rem 1rem;
-  background-color: #003366; /* British Rail Dark Blue */
+  background-color: #003366; /* Dark Blue */
   color: white;
   text-align: center;
   width: 100%;
@@ -152,7 +152,7 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .england-events-list {
+  .denmark-events-list {
     max-width: 95%;
   }
 }

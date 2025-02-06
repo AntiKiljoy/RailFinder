@@ -5,7 +5,7 @@ export default function DenmarkEventCard() {
   const navigate = useNavigate();
 
   function handleClick() {
-    navigate("/partners");
+    navigate("/DenmarkEventsPage");
   }
 
   return (
