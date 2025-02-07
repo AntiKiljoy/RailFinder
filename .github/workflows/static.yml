@@ -42,10 +42,20 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-artifact@v2 # Updated version here
         with:
           # Upload dist repository
           path: "./dist"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+        with:
+          artifact: dist
+          target: gh-pages
+          clean: true
+          publish_dir: ./dist
+          token: ${{ secrets.GITHUB_TOKEN }}
+          force_orphan: true
+          commit_message: "Deployed to GitHub Pages"
+          commit_user_name: "GitHub Actions"
+          commit_user_email: "hstconnor@gmail.com"
