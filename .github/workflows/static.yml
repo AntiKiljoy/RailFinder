@@ -38,36 +38,14 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build
-        run: npm run build --verbose && cp ./dist/index.html ./dist/404.html
-      - name: Verify build output
-        run: ls -la ./dist
-      - name: List all files in dist
-        run: find ./dist -type f -exec ls -la {} \;
-      - name: Check for symlinks and hard links
-        run: |
-          echo "Checking for symlinks and hard links in the build output..."
-          if find ./dist -type l | read; then
-            echo "Error: Symlinks found in build output" >&2
-            find ./dist -type l
-            exit 1
-          fi
-          if find ./dist -type f -links +1 | read; then
-            echo "Error: Hard links found in build output" >&2
-            find ./dist -type f -links +1
-            exit 1
-          fi
-          du -sh ./dist
-      - name: Set permissions on dist folder
-        run: chmod -R 755 ./dist
+        run: npm run build && cp ./dist/index.html ./dist/404.html
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-pages-artifact@v1
         with:
-          name: github-pages
-          path: ./dist
+          # Upload dist repository
+          path: "./dist"
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
-        with:
-          artifact_name: github-pages
+        uses: actions/deploy-pages@v1
