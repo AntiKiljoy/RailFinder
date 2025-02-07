@@ -6,9 +6,14 @@ import "./DirectoryPage.css";
 const DirectoryPage = () => {
   return (
     <section className="page" id="info-page">
-      <h1>Explore European Railways!</h1>
-      <DenmarkDirectory />
-      <EnglandDirectory />
+      <h1 tabIndex="0">Explore European Railways!</h1>
+      <div tabIndex="0">
+        {" "}
+        <DenmarkDirectory />{" "}
+      </div>
+      <section tabIndex="0">
+        <EnglandDirectory />{" "}
+      </section>
     </section>
   );
 };
