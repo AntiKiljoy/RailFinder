@@ -41,10 +41,17 @@ jobs:
         run: npm run build --verbose && cp ./dist/index.html ./dist/404.html
       - name: Verify build output
         run: ls -la ./dist
-      - name: Check for symlinks and size
+      - name: Check for symlinks and hard links
         run: |
+          echo "Checking for symlinks and hard links in the build output..."
           if find ./dist -type l | read; then
             echo "Error: Symlinks found in build output" >&2
+            find ./dist -type l
+            exit 1
+          fi
+          if find ./dist -type f -links +1 | read; then
+            echo "Error: Hard links found in build output" >&2
+            find ./dist -type f -links +1
             exit 1
           fi
           du -sh ./dist
