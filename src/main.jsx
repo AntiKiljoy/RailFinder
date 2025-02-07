@@ -5,9 +5,9 @@ import App from "./App.jsx";
 import "./styles.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-    <React.StrictMode>
-        <BrowserRouter basename={import.meta.env.DEV ? "/" : "/railfinder-app/"}>
-            <App />
-        </BrowserRouter>
-    </React.StrictMode>
+  <React.StrictMode>
+    <BrowserRouter basename={import.meta.env.DEV ? "/" : "/RailFinder/"}>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
 );
