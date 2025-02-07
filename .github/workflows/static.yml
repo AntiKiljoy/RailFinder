@@ -41,6 +41,13 @@ jobs:
         run: npm run build --verbose && cp ./dist/index.html ./dist/404.html
       - name: Verify build output
         run: ls -la ./dist
+      - name: Check for symlinks and size
+        run: |
+          if find ./dist -type l | read; then
+            echo "Error: Symlinks found in build output" >&2
+            exit 1
+          fi
+          du -sh ./dist
       - name: Set permissions on dist folder
         run: chmod -R 755 ./dist
       - name: Setup Pages
