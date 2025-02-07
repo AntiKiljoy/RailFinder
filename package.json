@@ -1,8 +1,9 @@
 {
-  "name": "react-vite-rest-post-app-with-auth",
+  "name": "RailFinder",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://antikiljoy.github.io/RailFinder/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
