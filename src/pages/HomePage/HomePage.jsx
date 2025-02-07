@@ -92,7 +92,7 @@ const HomePage = () => {
       </section>
 
       <section className="cta-section">
-        <h2 tabIndex="0">Get Started</h2>
+        <h2 tabIndex="0">Get Started!</h2>
         <p tabIndex="0">
           Sign up today to start your journey with Heritage Railway Explorer.
         </p>
