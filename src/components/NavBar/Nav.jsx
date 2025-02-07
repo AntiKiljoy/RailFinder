@@ -4,7 +4,7 @@ import discover from "../../images/discover.svg";
 import post from "../../images/post.svg";
 import info from "../../images/info.svg";
 import profile from "../../images/profile.svg";
-import "../NavBar/nav.css";
+import "./Nav.css";
 
 export default function Nav() {
   return (
