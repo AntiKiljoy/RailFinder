@@ -54,3 +54,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+        with:
+          artifact-path: dist
+          keep_files: false
+          target_branch: gh-pages
+          commit_message: "Deploy ${{ github.sha }}"
+          publish_dir: dist
+          token: ${{ secrets.GITHUB_TOKEN }} # This token is provided by GitHub Actions
