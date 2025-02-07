@@ -36,7 +36,7 @@ export default function App() {
     });
   }, []);
 
-  // variable holding all private routes including the nav bar
+  // variable hol§ng all private routes including the nav bar
   const privateRoutes = (
     <>
       <Nav />
